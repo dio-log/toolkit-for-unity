@@ -1,5 +1,5 @@
 
-namespace Modules.Binding.Scripts
+namespace Features.Binding.Scripts
 {
     public static class BindingOperation
     {

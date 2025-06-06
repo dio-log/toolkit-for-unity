@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Modules.Binding.Scripts
+namespace Features.Binding.Scripts
 {
     public class TextBinder : UIBehaviour
     {

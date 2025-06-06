@@ -1,4 +1,4 @@
-namespace Modules.Binding.Scripts
+namespace Features.Binding.Scripts
 {
     public interface IValueConvertor<TSource, TTarget>
     {

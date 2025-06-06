@@ -1,6 +1,6 @@
 using System;
 
-namespace Modules.Binding.Scripts
+namespace Features.Binding.Scripts
 {
     public class ReactiveProperty<T> : IBindable<T>
     {

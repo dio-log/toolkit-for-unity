@@ -1,7 +1,7 @@
 using System;
 using TMPro;
 
-namespace Modules.Binding.Scripts
+namespace Features.Binding.Scripts
 {
     public class BindableTMP : IBindable<string>
     {
