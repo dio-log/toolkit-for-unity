@@ -1,0 +1,10 @@
+{
+  "name": "git.dio-log.toolkit-for-unity",
+  "version": "1.0.0",
+  "displayName": "Toolkit for unity",
+  "description": "",
+  "unity": "2021.3",
+  "author": {
+    "name": "dio-log"
+  }
+}
