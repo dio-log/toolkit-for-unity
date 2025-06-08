@@ -4,6 +4,11 @@ namespace Features.Binding.Scripts
 {
     public class ReactiveProperty<T> : IBindable<T>
     {
+        public ReactiveProperty(T value)
+        {
+            Value = value;
+        }
+        
         public event Action<T> OnValueChanged = delegate { };
         
         public T Value { get; private set; }

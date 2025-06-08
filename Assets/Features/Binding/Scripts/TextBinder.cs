@@ -8,14 +8,24 @@ namespace Features.Binding.Scripts
     public class TextBinder : UIBehaviour
     {
         [SerializeField] private TMP_Text _textField;
+        [SerializeField] private BindingType _bindingType;
+        
+        public BindingType BindingType => _bindingType;
 
         private BindableTMP _bindableTMP;
 
         private Action _unbindAction;
+
+        public void SetBindingType(BindingType bindingType)
+        {
+            _bindingType = bindingType;
+        }
+        
+        public void Bind<TSource>(IBindable<TSource> source, IValueConvertor<TSource, string> convertor = null)
+        {
+            Unbind();
             
-        public void Bind<TSource>(IBindable<TSource> source, BindingType bindingType = BindingType.OneWay, IValueConvertor<TSource, string> convertor = null)
-        { 
-            var context = new BindingContext<TSource, string>(source, _bindableTMP, bindingType, convertor);
+            var context = new BindingContext<TSource, string>(source, _bindableTMP, _bindingType, convertor);
             BindingOperation.Bind(context);
 
             _unbindAction = () => { BindingOperation.Unbind(context); };

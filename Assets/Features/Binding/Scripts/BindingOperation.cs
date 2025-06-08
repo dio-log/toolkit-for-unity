@@ -11,7 +11,7 @@ namespace Features.Binding.Scripts
                 context.Target.OnValueChanged += context.OnTargetChanged;
             }
 
-            context.Target.SetValue(context.Converter.ToTarget(context.Source.Value));
+            // context.Target.SetValue(context.Converter.ToTarget(context.Source.Value));
         }
         
 

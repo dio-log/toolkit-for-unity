@@ -17,6 +17,14 @@ namespace Features.UI.ScrollViews.Tests
         [SerializeField] private int _indentSize = 30;
         
         private ViewNode _viewNode;
+
+        public void Bind(object source)
+        {
+            if (source is not ViewNode node) return;
+            
+            Bind(node);
+        }
+
         public void Bind(ViewNode source)
         {
             _viewNode = source;
